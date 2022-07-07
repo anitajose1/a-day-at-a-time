@@ -69,9 +69,10 @@ textarea{
   color: white;
 }
 
-.saveBtn i:hover {
+.saveBtn:hover {
   font-size: 20px;
   transition: all .3s ease-in-out;
+  background-color: palevioletred;
 }
 
 .form-control:focus {
