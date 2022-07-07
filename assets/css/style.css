@@ -84,6 +84,7 @@ textarea{
 @media (min-width: 576px) {
   .hour {
     font-size: smaller;
+    display: block;
   }
 }
 
