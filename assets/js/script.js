@@ -1,5 +1,5 @@
 var DateTime = moment().format("dddd, MMMM Do");
-
+// show current date
 $("#currentDay").text(DateTime);
 
 // array for time range
@@ -15,14 +15,22 @@ var timeArr = [
   "5 pm",
 ];
 
-// loop through time range array, creating each hour, input field, and text lock button
+userInput = "";
+
+// loop through time range array, creating rows, hours, input fields, & save buttons
 for (i = 0; i < timeArr.length; i++) {
-  var eachHour = $("<textarea>").text(timeArr[i]).addClass("hour");
+  var eachRow = $("<div>").addClass("row");
+  $(".container").append(eachRow);
+  var eachHour = $("<textarea>")
+    .text(timeArr[i])
+    .addClass("hour col-md-1 col-sm-1");
   var userInput = $("<input>")
     .attr("placeholder", "Add your notes here..")
-    .addClass("time-block");
-  var textLock = $("<button>").text("lock/unlock").addClass("saveBtn");
-  $(".container").append(eachHour);
-  $(".container").append(userInput);
-  $(".container").append(textLock);
+    .addClass("time-block col-md-10 col-sm-10");
+  var textLock = $("<button>")
+    .text("save")
+    .addClass("saveBtn col-md-1 col-sm-1");
+  eachRow.append(eachHour);
+  eachRow.append(userInput);
+  eachRow.append(textLock);
 }
