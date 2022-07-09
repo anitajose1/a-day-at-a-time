@@ -28,14 +28,15 @@ for (i = 0; i < timeArr.length; i++) {
   // create hour
   var eachHour = $("<textarea>")
     .text(timeArr[i])
-    .addClass("hour col-md-1 col-sm-1");
+    .addClass("hour col 12 col-md-1");
 
   // create user input field, add classes, placeholder attr, & data-value attr
   var userInput = $("<input>")
     .attr("placeholder", "Add your notes here..")
     .attr("data-value", i)
-    .addClass("time-block col-md-10 col-sm-10");
+    .addClass("time-block col-12 col-md-10");
   userInput.addClass("inputIndex-" + i);
+  userInput.trigger("focus");
 
   // compare startTime with present time to color-code input field
   if (startTime < moment().hour()) {
@@ -48,9 +49,7 @@ for (i = 0; i < timeArr.length; i++) {
   startTime++;
 
   //   create save button
-  var textLock = $("<button>")
-    .text("Save")
-    .addClass("saveBtn col-md-1 col-sm-1");
+  var textLock = $("<button>").text("Save").addClass("saveBtn col-12 col-md-1");
 
   // append time, input field, & save button to row
   eachRow.append(eachHour);

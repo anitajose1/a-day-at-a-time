@@ -19,6 +19,21 @@ textarea{
   color: black;
   border-radius: 0;
   border-bottom: 10px solid black;
+  background-color: antiquewhite;
+  padding-bottom: 30px;
+  padding-top: 45px;
+}
+
+.jumbotron h1 {
+  color:navy;
+}
+
+.caption {
+  color:brown;
+}
+
+.currentDay {
+  color: black;
 }
 
 .description{
@@ -33,7 +48,8 @@ textarea{
 .row {
   white-space: pre-wrap;
   height: 80px;
-  border-top: 1px solid white;;
+  border-top: 1px solid white;
+  margin-bottom: 10px;
 }
 
 .hour {
@@ -67,6 +83,7 @@ textarea{
   border-bottom-right-radius: 15px;
   background-color: #06AED5;
   color: white;
+  text-align: center;
 }
 
 .saveBtn:hover {
@@ -81,17 +98,126 @@ textarea{
   border-color: blue;
 }
 
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+  .jumbotron h1 {
+    font-size: 55px;
+  }
+
+  .jumbotron p {
+    font-size: 20px ;
+  }
+
+  .jumbotron {
+    padding-bottom: 18px;
+  }
+
+  #currentDay {
+    font-size: 20px;
+  }
+
+  .row {
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 85px;
+    justify-content: center;
+  }
+  
   .hour {
-    font-size: smaller;
-    display: block;
+    
+    text-align: center;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding-bottom: 0;
+    border: 1px dashed #000000;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+  }
+
+  .saveBtn {
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 0;
+    background-color: #06AED5;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  
+  .saveBtn:hover {
+    font-size: 16px;
+    transition: all .3s ease-in-out;
+    background-color: palevioletred;
+  }
+
+  .time-block{
+    text-align: left;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 }
 
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+  .jumbotron h1 {
+    font-size: 45px;
+  }
+
+  .jumbotron p {
+    font-size: 18px ;
+  }
+
+  .jumbotron {
+    padding-bottom: 20px;
+    background-color: antiquewhite;
+  }
+
+  #currentDay {
+    font-size: 17px;
+  }
+
+  .row {
+    margin-bottom: 85px;
+    justify-content: center;
+  }
+  
   .hour {
+    
+    text-align: center;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding-bottom: 0;
+    border: 1px dashed #000000;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+  }
+
+  .saveBtn {
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 0;
+    background-color: #06AED5;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  
+  .saveBtn:focus {
     font-size: 16px;
+    transition: all .3s ease-in-out;
+    background-color: palevioletred;
+  }
+
+  .time-block{
+    text-align: left;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 }
+
