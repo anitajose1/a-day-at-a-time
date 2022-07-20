@@ -17,4 +17,4 @@ While updating the JavaScript code, the following sources were useful references
 - https://getbootstrap.com/docs/4.0/layout/grid/
 - https://www.geeksforgeeks.org/javascript-localstorage/
 
-![screenshot of deployed application](./assets/images/screenshot.png)
+![screenshot of deployed application](./assets/images/screenshot.png.jpg)
